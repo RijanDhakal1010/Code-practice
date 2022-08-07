@@ -2,6 +2,8 @@ import argparse # this will help create CLI elements
 
 import pickle
 
+import os
+
 # this is the name of the parser object that will parse the commandline
 parser = argparse.ArgumentParser(description=" This script takes an orthogroup with peptide sequences and generates a corresponding orthogroup with cds sequences. Two things are absoultely necessary, first a dict to identify the species in the sequence header using the most common subscript and dictified cds fastas with similar headers.")
 
@@ -29,5 +31,11 @@ def main():
     except:
         print("Please make sure you supplied the correct location for the pickle")
 
+    try:
+        os.chdir(args.orthos)
+    except:
+        print("Is the path to the directory with ortho right?")
+    
+    
 
 main()
