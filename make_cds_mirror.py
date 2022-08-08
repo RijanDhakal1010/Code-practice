@@ -44,26 +44,26 @@ def main():
         cds_base = f'{args.output}/{ortho_pep_base}.cds'
         ortho_pep_base = {}
         
-    for pep_header in current_ortho_pep_headers:
-        if pep_header.startswith('>'):
-            for code_name in species_codes:
-                if code_name in pep_header:
-                    species_name = species_codes.get(code_name)
-    
-        species_pickle = f'{args.cds}/{species_name}.pickle'
-
-        try:
-            with open(species_pickle,'rb') as cds_handle:
-                cds_pickle = pickle.load(cds_handle)
-        except:
-            print("Are you sure that ",species_pickle," exists?")
-
-        sequence_cds = cds_pickle.get(pep_header.rstrip(),"None") # what are in peps may not be in cds. So, if it is in pep but not in cds then we do not want to send NoneType to the dict
-        ortho_pep_base[pep_header] = sequence_cds
-    
-    for l in ortho_pep_base:
-        line = l + '\n' +  ortho_pep_base
-        with open(cds_base,'a') as cds_handle:
-            cds_handle.write(line)
+        for pep_header in current_ortho_pep_headers:    
+            if pep_header.startswith('>'):  
+                for code_name in species_codes: 
+                    if code_name in pep_header: 
+                        species_name = species_codes.get(code_name) 
+            
+            species_pickle = f'{args.cds}/{species_name}.pickle'    
+        
+            try:    
+                with open(species_pickle,'rb') as cds_handle:   
+                    cds_pickle = pickle.load(cds_handle)    
+            except: 
+                print("Are you sure that ",species_pickle," exists?")   
+        
+            sequence_cds = cds_pickle.get(pep_header.rstrip(),"None") # what are in peps may not be in cds. So, if it is in pep but not in cds then we do not want to send NoneType to the dict 
+            ortho_pep_base[pep_header] = sequence_cds   
+            
+        for l in ortho_pep_base:    
+            line = l + '\n' +  ortho_pep_base   
+            with open(cds_base,'a') as cds_handle:  
+                cds_handle.write(line)  
 
 main()
