@@ -29,18 +29,13 @@ try:
 except:
     print("Please make sure you supplied the correct location for the pickle")
 
-try:
-    os.chdir(args.orthos)
-except:
-    print("Is the path to the directory with orthos right?")
-
 def write_to_file(file_name,the_dict):
 
     file_name = file_name.split('.')[0]
     cds_base = f'{args.output}/{file_name}.cds'
 
     for l in the_dict:    
-        line = l + '\n' +  the_dict   
+        line = l +  the_dict[l] + '\n'
         with open(cds_base,'a') as cds_handle:  
             cds_handle.write(line)
 
@@ -55,21 +50,21 @@ def list_to_cds_sequences(file_name,file_names_list):
             if code_name in pep_header:
                 species_name = species_codes.get(code_name)
         
-        species_pickle = f'{args.cds}/{species_name}.pickle'
+                species_pickle = f'{args.cds}/{species_name}.pickle'
 
-        try:    
-            with open(species_pickle,'rb') as cds_handle:   
-                cds_pickle = pickle.load(cds_handle)    
-        except: 
-            print("Are you sure that ",species_pickle," exists?")
-        
-        sequence_cds = cds_pickle.get(pep_header.rstrip(),"None") # what are in peps may not be in cds. So, if it is in pep but not in cds then we do not want to send NoneType to the dict 
-        cds_headers[pep_header] = sequence_cds
-    
+                try:    
+                    with open(species_pickle,'rb') as cds_handle:   
+                        cds_pickle = pickle.load(cds_handle)
+                    sequence_cds = cds_pickle.get(pep_header.rstrip(),"None") # what are in peps may not be in cds. So, if it is in pep but not in cds then we do not want to send NoneType to the dict 
+                    cds_headers[pep_header] = sequence_cds    
+                except: 
+                    print("Are you sure that ",species_pickle," exists?")
+
     write_to_file(file_name,cds_headers)    
 
 def get_headers(file_name):
-    with open(file_name,'r') as current_ortho_pep:
+    file_name_loc = f'{args.orthos}/{file_name}'
+    with open(file_name_loc,'r') as current_ortho_pep:
         current_ortho_pep_headers = current_ortho_pep.readlines()
 
     file_names_list = file_name
@@ -83,7 +78,7 @@ def get_headers(file_name):
 
 def main():
     
-    for ortho_pep in os.listdir():
+    for ortho_pep in os.listdir(args.orthos):
         get_headers(ortho_pep)
 
 main()
