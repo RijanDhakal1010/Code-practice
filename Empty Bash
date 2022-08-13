@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for file in *.fa
+do
+	base_name="$(basename $file .fa)"
+	new_ext=".no_trailing_line"
+	new_file="$base_name$new_ext"
+	sed -e :a -e '/./,$!d;/^\n*$/{$d;N;};/\n$/ba' $file > $new_file
+done
