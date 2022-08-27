@@ -1,8 +1,15 @@
-library(tidyverse)
+library(ggplot2)
 library(ggtree)
-tree <- read.tree("raw_data/tree.txt")
 
-dd <- read_tsv("raw_data/counts.csv")
-row.names(dd) <- NULL
+x <- read.tree("raw_data/tree.txt")
+info <- read.csv("raw_data/counts.csv",sep = '\t',header=TRUE)
 
-tree <- tree %<+% dd + geom_tiplab(aes()) +geom_tippoint(aes(size=Increase), alpha=0.25)
+p <- ggtree(x) %<+% info + xlim(-.1, 5)
+
+p2 <- p + geom_tiplab(offset = 0.2) + geom_tippoint(aes(caption = Increase)) + theme_tree2()+geom_tiplab(align=TRUE, linesize=.5)+ xlim(0,25)
+
+ggsave("test_2.pdf", width = 60, height = 80, units = "cm", limitsize = FALSE)
+
+print(p2)
+
+?geom_tippoint
