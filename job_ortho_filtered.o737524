@@ -1,0 +1,302 @@
+setting dmc scratch directory
+ 
+============================================================
+=====         Summary of your script job               =====
+============================================================
+  The script file is: command_orthofinder.sh
+  The time limit is 360:00:00 HH:MM:SS.
+  The target directory is: /scratch/Rijan_folder
+  The working directory is:  /scratch-local/uahrrd001.job_ortho_filtered.737524
+  The memory limit is: 120gb
+  The job will start running after: 2022-08-28T09:18:47
+  Job Name: job_ortho_filtered
+  Virtual queue: large
+  QOS: --qos=large
+  Constraints: --constraint=milan
+  Using  8  cores on master node  dmc87
+  Node list:  dmc87
+  Nodes:  dmc87 dmc87 dmc87 dmc87 dmc87 dmc87 dmc87 dmc87
+  Command typed:
+/apps/scripts/run_script command_orthofinder.sh     
+  Queue submit command:
+sbatch --qos=large -J job_ortho_filtered --begin=2022-08-28T09:18:47 --requeue --mail-user=rrd0009@uah.edu -o job_ortho_filtered.o737524 -t 360:00:00 -N 1-1 -n 8 --mem-per-cpu=15000mb --constraint=milan 
+
+OrthoFinder version 2.5.4 Copyright (C) 2014 David Emms
+
+2022-08-28 09:19:29 : Starting OrthoFinder 2.5.4
+128 thread(s) for highly parallel tasks (BLAST searches etc.)
+16 thread(s) for OrthoFinder algorithm
+
+Checking required programs are installed
+----------------------------------------
+Test can run "mcl -h" - ok
+Test can run "fastme -i /scratch/Rijan_folder/filtered/SimpleTest.phy -o /scratch/Rijan_folder/filtered/SimpleTest.tre" - ok
+Using previously calculated BLAST results in /scratch/Rijan_folder/filtered/
+
+Running OrthoFinder algorithm
+-----------------------------
+2022-08-28 09:20:07 : Initial processing of each species
+2022-08-28 09:25:31 : Initial processing of species 15 complete
+2022-08-28 09:25:57 : Initial processing of species 12 complete
+2022-08-28 09:26:03 : Initial processing of species 7 complete
+2022-08-28 09:26:05 : Initial processing of species 3 complete
+2022-08-28 09:26:38 : Initial processing of species 10 complete
+2022-08-28 09:27:18 : Initial processing of species 6 complete
+2022-08-28 09:27:37 : Initial processing of species 8 complete
+2022-08-28 09:27:37 : Initial processing of species 9 complete
+2022-08-28 09:27:43 : Initial processing of species 11 complete
+2022-08-28 09:27:52 : Initial processing of species 13 complete
+2022-08-28 09:28:08 : Initial processing of species 2 complete
+2022-08-28 09:28:10 : Initial processing of species 4 complete
+2022-08-28 09:29:15 : Initial processing of species 0 complete
+2022-08-28 09:29:35 : Initial processing of species 14 complete
+2022-08-28 09:29:40 : Initial processing of species 17 complete
+2022-08-28 09:29:42 : Initial processing of species 1 complete
+2022-08-28 09:30:28 : Initial processing of species 16 complete
+2022-08-28 09:31:04 : Initial processing of species 5 complete
+2022-08-28 09:32:28 : Initial processing of species 21 complete
+2022-08-28 09:32:44 : Initial processing of species 32 complete
+2022-08-28 09:32:56 : Initial processing of species 24 complete
+2022-08-28 09:33:23 : Initial processing of species 19 complete
+2022-08-28 09:34:13 : Initial processing of species 27 complete
+2022-08-28 09:34:28 : Initial processing of species 26 complete
+2022-08-28 09:34:28 : Initial processing of species 23 complete
+2022-08-28 09:34:38 : Initial processing of species 25 complete
+2022-08-28 09:34:39 : Initial processing of species 18 complete
+2022-08-28 09:34:52 : Initial processing of species 20 complete
+2022-08-28 09:35:34 : Initial processing of species 30 complete
+2022-08-28 09:36:25 : Initial processing of species 33 complete
+2022-08-28 09:36:27 : Initial processing of species 22 complete
+2022-08-28 09:37:22 : Initial processing of species 29 complete
+2022-08-28 09:37:54 : Initial processing of species 28 complete
+2022-08-28 09:38:27 : Initial processing of species 39 complete
+2022-08-28 09:39:46 : Initial processing of species 34 complete
+2022-08-28 09:39:51 : Initial processing of species 40 complete
+2022-08-28 09:40:44 : Initial processing of species 35 complete
+2022-08-28 09:41:53 : Initial processing of species 41 complete
+2022-08-28 09:42:07 : Initial processing of species 46 complete
+2022-08-28 09:42:17 : Initial processing of species 44 complete
+2022-08-28 09:42:18 : Initial processing of species 43 complete
+2022-08-28 09:42:18 : Initial processing of species 45 complete
+2022-08-28 09:42:39 : Initial processing of species 48 complete
+2022-08-28 09:43:05 : Initial processing of species 50 complete
+2022-08-28 09:43:12 : Initial processing of species 37 complete
+2022-08-28 09:43:18 : Initial processing of species 42 complete
+2022-08-28 09:43:23 : Initial processing of species 38 complete
+2022-08-28 09:43:38 : Initial processing of species 36 complete
+2022-08-28 09:43:42 : Initial processing of species 47 complete
+2022-08-28 09:44:06 : Initial processing of species 31 complete
+2022-08-28 09:46:25 : Initial processing of species 49 complete
+2022-08-28 09:47:13 : Initial processing of species 62 complete
+2022-08-28 09:47:36 : Initial processing of species 52 complete
+2022-08-28 09:48:18 : Initial processing of species 53 complete
+2022-08-28 09:48:24 : Initial processing of species 57 complete
+2022-08-28 09:48:48 : Initial processing of species 56 complete
+2022-08-28 09:49:24 : Initial processing of species 59 complete
+2022-08-28 09:49:28 : Initial processing of species 65 complete
+2022-08-28 09:49:43 : Initial processing of species 58 complete
+2022-08-28 09:50:21 : Initial processing of species 51 complete
+2022-08-28 09:50:25 : Initial processing of species 64 complete
+2022-08-28 09:50:43 : Initial processing of species 61 complete
+2022-08-28 09:51:06 : Initial processing of species 60 complete
+2022-08-28 09:51:23 : Initial processing of species 68 complete
+2022-08-28 09:51:40 : Initial processing of species 69 complete
+2022-08-28 09:51:43 : Initial processing of species 63 complete
+2022-08-28 09:51:59 : Initial processing of species 55 complete
+2022-08-28 09:52:21 : Initial processing of species 66 complete
+2022-08-28 09:52:30 : Initial processing of species 54 complete
+2022-08-28 09:53:51 : Initial processing of species 67 complete
+2022-08-28 09:55:05 : Initial processing of species 70 complete
+2022-08-28 09:55:22 : Initial processing of species 73 complete
+2022-08-28 09:55:29 : Initial processing of species 72 complete
+2022-08-28 09:56:50 : Initial processing of species 76 complete
+2022-08-28 09:57:14 : Initial processing of species 75 complete
+2022-08-28 09:57:54 : Initial processing of species 84 complete
+2022-08-28 09:58:39 : Initial processing of species 79 complete
+2022-08-28 09:58:48 : Initial processing of species 80 complete
+2022-08-28 09:59:01 : Initial processing of species 82 complete
+2022-08-28 09:59:03 : Initial processing of species 77 complete
+2022-08-28 09:59:17 : Initial processing of species 83 complete
+2022-08-28 09:59:32 : Initial processing of species 74 complete
+2022-08-28 10:00:15 : Initial processing of species 78 complete
+2022-08-28 10:00:49 : Initial processing of species 85 complete
+2022-08-28 10:02:05 : Initial processing of species 89 complete
+2022-08-28 10:02:22 : Initial processing of species 87 complete
+2022-08-28 10:02:42 : Initial processing of species 71 complete
+2022-08-28 10:03:01 : Initial processing of species 92 complete
+2022-08-28 10:03:57 : Initial processing of species 95 complete
+2022-08-28 10:03:57 : Initial processing of species 86 complete
+2022-08-28 10:04:08 : Initial processing of species 93 complete
+2022-08-28 10:04:55 : Initial processing of species 90 complete
+2022-08-28 10:05:20 : Initial processing of species 94 complete
+2022-08-28 10:05:49 : Initial processing of species 91 complete
+2022-08-28 10:05:53 : Initial processing of species 81 complete
+2022-08-28 10:06:24 : Initial processing of species 97 complete
+2022-08-28 10:06:35 : Initial processing of species 96 complete
+2022-08-28 10:06:36 : Initial processing of species 88 complete
+2022-08-28 10:07:43 : Initial processing of species 98 complete
+2022-08-28 10:08:33 : Initial processing of species 100 complete
+2022-08-28 10:09:01 : Initial processing of species 103 complete
+2022-08-28 10:09:11 : Initial processing of species 106 complete
+2022-08-28 10:09:21 : Initial processing of species 99 complete
+2022-08-28 10:09:22 : Initial processing of species 105 complete
+2022-08-28 10:09:23 : Initial processing of species 102 complete
+2022-08-28 10:09:25 : Initial processing of species 101 complete
+2022-08-28 10:09:28 : Initial processing of species 104 complete
+2022-08-28 10:10:01 : Initial processing of species 108 complete
+2022-08-28 10:10:49 : Initial processing of species 110 complete
+2022-08-28 10:11:09 : Initial processing of species 107 complete
+2022-08-28 10:15:28 : Initial processing of species 109 complete
+2022-08-28 10:20:50 : Connected putative homologues
+2022-08-28 10:21:47 : Written final scores for species 24 to graph file
+2022-08-28 10:21:50 : Written final scores for species 30 to graph file
+2022-08-28 10:21:54 : Written final scores for species 26 to graph file
+2022-08-28 10:21:58 : Written final scores for species 16 to graph file
+2022-08-28 10:22:01 : Written final scores for species 28 to graph file
+2022-08-28 10:22:04 : Written final scores for species 22 to graph file
+2022-08-28 10:22:04 : Written final scores for species 10 to graph file
+2022-08-28 10:22:05 : Written final scores for species 12 to graph file
+2022-08-28 10:22:09 : Written final scores for species 20 to graph file
+2022-08-28 10:22:13 : Written final scores for species 4 to graph file
+2022-08-28 10:22:15 : Written final scores for species 6 to graph file
+2022-08-28 10:22:16 : Written final scores for species 8 to graph file
+2022-08-28 10:22:16 : Written final scores for species 18 to graph file
+2022-08-28 10:22:22 : Written final scores for species 0 to graph file
+2022-08-28 10:22:27 : Written final scores for species 2 to graph file
+2022-08-28 10:22:47 : Written final scores for species 17 to graph file
+2022-08-28 10:22:57 : Written final scores for species 14 to graph file
+2022-08-28 10:23:00 : Written final scores for species 27 to graph file
+2022-08-28 10:23:06 : Written final scores for species 21 to graph file
+2022-08-28 10:23:09 : Written final scores for species 25 to graph file
+2022-08-28 10:23:11 : Written final scores for species 23 to graph file
+2022-08-28 10:23:17 : Written final scores for species 32 to graph file
+2022-08-28 10:23:26 : Written final scores for species 29 to graph file
+2022-08-28 10:23:27 : Written final scores for species 7 to graph file
+2022-08-28 10:23:32 : Written final scores for species 9 to graph file
+2022-08-28 10:23:33 : Written final scores for species 11 to graph file
+2022-08-28 10:23:35 : Written final scores for species 3 to graph file
+2022-08-28 10:23:35 : Written final scores for species 13 to graph file
+2022-08-28 10:23:36 : Written final scores for species 19 to graph file
+2022-08-28 10:23:38 : Written final scores for species 31 to graph file
+2022-08-28 10:23:45 : Written final scores for species 1 to graph file
+2022-08-28 10:23:56 : Written final scores for species 5 to graph file
+2022-08-28 10:24:07 : Written final scores for species 40 to graph file
+2022-08-28 10:24:08 : Written final scores for species 15 to graph file
+2022-08-28 10:24:11 : Written final scores for species 34 to graph file
+2022-08-28 10:24:16 : Written final scores for species 50 to graph file
+2022-08-28 10:24:16 : Written final scores for species 33 to graph file
+2022-08-28 10:24:26 : Written final scores for species 48 to graph file
+2022-08-28 10:24:26 : Written final scores for species 38 to graph file
+2022-08-28 10:24:37 : Written final scores for species 46 to graph file
+2022-08-28 10:24:42 : Written final scores for species 42 to graph file
+2022-08-28 10:24:43 : Written final scores for species 56 to graph file
+2022-08-28 10:24:46 : Written final scores for species 36 to graph file
+2022-08-28 10:24:47 : Written final scores for species 44 to graph file
+2022-08-28 10:24:54 : Written final scores for species 62 to graph file
+2022-08-28 10:25:00 : Written final scores for species 58 to graph file
+2022-08-28 10:25:04 : Written final scores for species 52 to graph file
+2022-08-28 10:25:08 : Written final scores for species 39 to graph file
+2022-08-28 10:25:19 : Written final scores for species 54 to graph file
+2022-08-28 10:25:20 : Written final scores for species 41 to graph file
+2022-08-28 10:25:22 : Written final scores for species 60 to graph file
+2022-08-28 10:25:35 : Written final scores for species 64 to graph file
+2022-08-28 10:25:36 : Written final scores for species 57 to graph file
+2022-08-28 10:25:48 : Written final scores for species 43 to graph file
+2022-08-28 10:25:49 : Written final scores for species 35 to graph file
+2022-08-28 10:25:50 : Written final scores for species 49 to graph file
+2022-08-28 10:25:54 : Written final scores for species 51 to graph file
+2022-08-28 10:25:55 : Written final scores for species 45 to graph file
+2022-08-28 10:26:02 : Written final scores for species 47 to graph file
+2022-08-28 10:26:02 : Written final scores for species 66 to graph file
+2022-08-28 10:26:09 : Written final scores for species 59 to graph file
+2022-08-28 10:26:13 : Written final scores for species 68 to graph file
+2022-08-28 10:26:14 : Written final scores for species 53 to graph file
+2022-08-28 10:26:28 : Written final scores for species 37 to graph file
+2022-08-28 10:26:32 : Written final scores for species 65 to graph file
+2022-08-28 10:26:34 : Written final scores for species 61 to graph file
+2022-08-28 10:26:37 : Written final scores for species 63 to graph file
+2022-08-28 10:26:38 : Written final scores for species 70 to graph file
+2022-08-28 10:26:41 : Written final scores for species 72 to graph file
+2022-08-28 10:26:52 : Written final scores for species 69 to graph file
+2022-08-28 10:26:57 : Written final scores for species 55 to graph file
+2022-08-28 10:26:58 : Written final scores for species 76 to graph file
+2022-08-28 10:27:03 : Written final scores for species 67 to graph file
+2022-08-28 10:27:09 : Written final scores for species 80 to graph file
+2022-08-28 10:27:10 : Written final scores for species 84 to graph file
+2022-08-28 10:27:19 : Written final scores for species 82 to graph file
+2022-08-28 10:27:28 : Written final scores for species 73 to graph file
+2022-08-28 10:27:31 : Written final scores for species 92 to graph file
+2022-08-28 10:27:32 : Written final scores for species 78 to graph file
+2022-08-28 10:27:41 : Written final scores for species 94 to graph file
+2022-08-28 10:27:45 : Written final scores for species 86 to graph file
+2022-08-28 10:27:55 : Written final scores for species 90 to graph file
+2022-08-28 10:28:03 : Written final scores for species 96 to graph file
+2022-08-28 10:28:08 : Written final scores for species 74 to graph file
+2022-08-28 10:28:13 : Written final scores for species 77 to graph file
+2022-08-28 10:28:20 : Written final scores for species 85 to graph file
+2022-08-28 10:28:28 : Written final scores for species 98 to graph file
+2022-08-28 10:28:29 : Written final scores for species 93 to graph file
+2022-08-28 10:28:33 : Written final scores for species 100 to graph file
+2022-08-28 10:28:34 : Written final scores for species 83 to graph file
+2022-08-28 10:28:34 : Written final scores for species 88 to graph file
+2022-08-28 10:28:34 : Written final scores for species 95 to graph file
+2022-08-28 10:28:44 : Written final scores for species 102 to graph file
+2022-08-28 10:28:48 : Written final scores for species 79 to graph file
+2022-08-28 10:28:49 : Written final scores for species 97 to graph file
+2022-08-28 10:28:51 : Written final scores for species 87 to graph file
+2022-08-28 10:28:51 : Written final scores for species 71 to graph file
+2022-08-28 10:29:10 : Written final scores for species 91 to graph file
+2022-08-28 10:29:15 : Written final scores for species 75 to graph file
+2022-08-28 10:29:16 : Written final scores for species 104 to graph file
+2022-08-28 10:29:17 : Written final scores for species 81 to graph file
+2022-08-28 10:29:19 : Written final scores for species 106 to graph file
+2022-08-28 10:29:20 : Written final scores for species 101 to graph file
+2022-08-28 10:29:24 : Written final scores for species 108 to graph file
+2022-08-28 10:29:25 : Written final scores for species 89 to graph file
+2022-08-28 10:29:31 : Written final scores for species 110 to graph file
+2022-08-28 10:29:32 : Written final scores for species 99 to graph file
+2022-08-28 10:29:38 : Written final scores for species 103 to graph file
+2022-08-28 10:29:55 : Written final scores for species 105 to graph file
+2022-08-28 10:30:01 : Written final scores for species 107 to graph file
+2022-08-28 10:30:54 : Written final scores for species 109 to graph file
+
+WARNING: program called by OrthoFinder produced output to stderr
+
+Command: mcl /scratch/Rijan_folder/filtered/OrthoFinder/Results_Aug28/WorkingDirectory/OrthoFinder_graph.txt -I 1.5 -o /scratch/Rijan_folder/filtered/OrthoFinder/Results_Aug28/WorkingDirectory/clusters_OrthoFinder_I1.5.txt -te 16 -V all
+
+stdout
+------
+b''
+stderr
+------
+b'[mcl] cut <4> instances of overlap\n'
+2022-08-28 11:42:29 : Ran MCL
+
+Writing orthogroups to file
+---------------------------
+OrthoFinder assigned 1951670 genes (98.1% of total) to 25646 orthogroups. Fifty percent of all genes were in orthogroups with 263 or more genes (G50 was 263) and were contained in the largest 1783 orthogroups (O50 was 1783). There were 613 orthogroups with all species present and 0 of these consisted entirely of single-copy genes.
+
+2022-08-28 11:44:20 : Done orthogroups
+
+Analysing Orthogroups
+=====================
+
+Calculating gene distances
+--------------------------
+2022-08-28 14:01:03 : Done
+2022-08-28 14:01:29 : Done 0 of 15934
+2022-08-28 14:32:51 : Done 1000 of 15934
+2022-08-28 14:35:04 : Done 2000 of 15934
+2022-08-28 14:35:45 : Done 3000 of 15934
+2022-08-28 14:36:05 : Done 4000 of 15934
+2022-08-28 14:36:16 : Done 5000 of 15934
+2022-08-28 14:36:23 : Done 6000 of 15934
+2022-08-28 14:36:28 : Done 7000 of 15934
+2022-08-28 14:36:30 : Done 8000 of 15934
+2022-08-28 14:36:32 : Done 9000 of 15934
+2022-08-28 14:36:33 : Done 10000 of 15934
+2022-08-28 14:36:35 : Done 11000 of 15934
+2022-08-28 14:36:37 : Done 12000 of 15934
+2022-08-28 14:36:38 : Done 13000 of 15934
+2022-08-28 14:36:40 : Done 14000 of 15934
+2022-08-28 14:36:42 : Done 15000 of 15934
