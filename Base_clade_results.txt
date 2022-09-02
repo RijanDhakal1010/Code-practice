@@ -1,4 +1,4 @@
-Taxa	Increase	Decrease
+Name	Increase	Decrease
 <217>	27	607
 Nothoceros_vincentianus<215>	1431	1291
 <210>	1171	173
