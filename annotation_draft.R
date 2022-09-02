@@ -4,12 +4,12 @@ p <- read.tree("tree_maybe.tre")
 
 data_file <- read.table(file = 'Base_clade_results.txt', sep = '\t', header = TRUE)
 
-data_file <- data_file[sample(1:217,217),]
+p = ggtree(p) %<+%  data_file
 
-row.names(data_file) <- NULL
+#ggtree(p,branch.length = 'none') + theme_tree2()+geom_tiplab(align=TRUE, linesize=.5)+ xlim(0,25)
 
-print(data_file) 
+#p + geom_text(aes(label=Increase), hjust=1, vjust=1.4, size=3)
 
-p <- p %<+% data_file + geom_text + geom_tippoint() + geom_text(aes(color=place, label=value), hjust=1, vjust=1.4, size=3)
+p + geom_text(aes(label=Taxa), hjust=1, vjust=-0.4, size=3) + geom_text(aes(label=Increase), hjust=1, vjust=1.4, size=3)
 
-print(tree)
+print(p)
