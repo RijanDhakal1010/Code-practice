@@ -3,7 +3,7 @@ import argparse # this will help create CLI elements
 import os
 
 # this is the name of the parser object that will parse the commandline
-parser = argparse.ArgumentParser(description="")
+parser = argparse.ArgumentParser(description="This script should take cds files in one folder (with 'None' coded traanscripts), a second folder with peptide files that have no 'None' and a third folder where an output file is produced that only has the intersection of headers between the cds file from the first folder and the headers of the peptide files in the second folder. and remove all the headers with 'None' transcripts in each file.")
 
 # the arguments will be coded in the following format
 # If the default flag is false then there is no default.
@@ -15,7 +15,9 @@ parser.add_argument('--peps',nargs='?', const='bar',default='Default', help= "Th
 
 parser.add_argument('--cds',nargs='?', const='bar',default=False, help='This is path to the folders with the None coded cds files are. Make sure not to supply the trailing slash at the end, python does that on its own.')
 
-parser.add_argument('--ext',nargs='?', const='bar',default=".fa", help='The extension of the cds peptide files. Please supply one or .fa will be used by default. And if you do supply one do not forget the dot.')
+parser.add_argument('--pepext',nargs='?', const='bar',default=".pep", help='The extension of the cds peptide files. Please supply one or .fa will be used by default. And if you do supply one do not forget the dot.')
+
+parser.add_argument('--CDSext',nargs='?', const='bar',default=".cds", help='The extension of the cds peptide files. Please supply one or .fa will be used by default. And if you do supply one do not forget the dot.')
 
 parser.add_argument('--out',nargs='?', const='bar',default=False, help='This is the location where the output files will be delivered. Make sure not to supply the trailing slash at the end, python does that on its own.') 
 
@@ -32,15 +34,13 @@ def run():
 
     for i in os.listdir(args.cds):
 
-        l = i.rsplit('.')[0]
+        l = i.rsplit('.')[0] # this takes the files and retains only their basename in l
 
-        k = f'{args.out}{l}{args.ext}'
+        k = f'{args.out}{l}{".no_nones"}{args.pepext}' # this is to make the output file later
+        
+        l = f'{args.peps}{l}{args.pepext}' # this is to acces the pepfile
 
-        l = f'{args.peps}{l}{args.ext}'
-
-        j = f'{args.cds}{i}'
-
-        print(l)
+        j = f'{args.cds}{i}' # this one does not need the {args.CDSext} because it can access the files through the for loop. 
 
         with open(j,'r') as nucleo:
             nucleo_lines = nucleo.readlines()
@@ -70,7 +70,7 @@ def run():
 def main():
 
     if os.path.isdir(args.peps) == False:
-        print("Cannot access ", args.peps,", are you sure it is there?")
+        print("Cannot access ", args.peps,", are you sure it is there? Please make note of the extensions in the CLI")
         quit()
     
     if os.path.isdir(args.out) == False:
